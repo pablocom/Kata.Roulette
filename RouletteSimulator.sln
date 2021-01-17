@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteSimulator", "RouletteSimulator\RouletteSimulator.csproj", "{63E84468-33E9-4389-990C-C8DDD3F733E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouletteSimulator.Tests", "RouletteSimulator.Tests\RouletteSimulator.Tests.csproj", "{130877C4-A976-4A66-9752-0A6FEAE4461F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63E84468-33E9-4389-990C-C8DDD3F733E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E84468-33E9-4389-990C-C8DDD3F733E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E84468-33E9-4389-990C-C8DDD3F733E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E84468-33E9-4389-990C-C8DDD3F733E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130877C4-A976-4A66-9752-0A6FEAE4461F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130877C4-A976-4A66-9752-0A6FEAE4461F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130877C4-A976-4A66-9752-0A6FEAE4461F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130877C4-A976-4A66-9752-0A6FEAE4461F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
