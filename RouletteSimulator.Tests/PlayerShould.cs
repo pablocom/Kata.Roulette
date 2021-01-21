@@ -58,11 +58,21 @@ namespace RouletteSimulator.Tests
         }
         
         [Test]
-        public void ThrowExceptionIfTriesToBetMoreMoneyThanActual()
+        public void ThrowExceptionIfTriesNumberBetMoreMoneyThanActual()
         {
             var player = new Player();
             
             TestDelegate testDelegate = () => player.CreateBetFor(5, 16.56);
+
+            Assert.Throws<ArgumentException>(testDelegate, "Actual money is less than requested to bet");
+        }
+        
+        [Test]
+        public void ThrowExceptionIfTriesToColourBetMoreMoneyThanActual()
+        {
+            var player = new Player();
+            
+            TestDelegate testDelegate = () => player.CreateBetFor(Colour.Black, 16.56);
 
             Assert.Throws<ArgumentException>(testDelegate, "Actual money is less than requested to bet");
         }
