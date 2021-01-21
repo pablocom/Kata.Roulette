@@ -41,8 +41,7 @@ namespace RouletteSimulator.Tests
             player.AddMoney(amount);
             player.CreateBetFor(colourBet, amount);
 
-            Assert.That(player.CurrentBets.First(), Is.TypeOf(typeof(ColourBet)));
-            Assert.That(((ColourBet) player.CurrentBets.First()).MoneyBet, Is.EqualTo(Colour.Red));
+            Assert.That(((ColourBet) player.CurrentBets.First()).Colour, Is.EqualTo(Colour.Red));
             Assert.That(player.CurrentBets.First().MoneyBet, Is.EqualTo(amount));
         }
 
