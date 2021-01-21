@@ -15,11 +15,11 @@ namespace RouletteSimulator.Tests
         [TestCase(13, Colour.Black)]
         [TestCase(22, Colour.Black)]
         [TestCase(35, Colour.Black)]
-        public void CreateBetColourForGivenBetNumber(int betNumber, Colour expectedColour)  
+        public void RecognizeColorOfGivenNumber(int number, Colour expectedColour)
         {
-            var bet = NumberBet.CreateNumberBet(betNumber, 1);
+            var colour = ColourByNumberMapper.ColourByNumber(number);
             
-            Assert.That(bet.BetNumber, Is.EqualTo(betNumber));
+            Assert.That(colour, Is.EqualTo(expectedColour));
         }
         
         [Test]
