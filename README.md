@@ -54,3 +54,7 @@ What is going to be your next bet? (Red, Black, 6, 17...)
 Format -> {number or colour} {amount}
 black 10
 ```
+
+### Collaboration
+I hope you enjoy the kata (this is the first one that I create), please if you have any comment or improvement I would be pleased
+to listen to you, don't hesitate to create a pull request with the proposal! ;)
