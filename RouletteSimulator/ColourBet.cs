@@ -2,6 +2,8 @@
 {
     public class ColourBet : Bet
     {
+        private Colour Colour { get; }
+        
         public ColourBet(Colour colour, double moneyBet) : base(moneyBet)
         {
             Colour = colour;

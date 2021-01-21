@@ -20,7 +20,6 @@ namespace RouletteSimulator.Tests
             var bet = NumberBet.CreateNumberBet(betNumber, 1);
             
             Assert.That(bet.BetNumber, Is.EqualTo(betNumber));
-            Assert.That(bet.Colour, Is.EqualTo(expectedColour));
         }
         
         [Test]

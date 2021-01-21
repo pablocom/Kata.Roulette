@@ -12,7 +12,6 @@ namespace RouletteSimulator
                 throw new ArgumentException("Number you tried to bet for is out of range");
             
             BetNumber = betNumber;
-            Colour = ColourByNumberMapper.ColourByNumber(betNumber);
         }
         
         public static NumberBet CreateNumberBet(int betNumber, double amount)
