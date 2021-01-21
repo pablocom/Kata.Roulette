@@ -7,7 +7,7 @@ In the game, players may choose to place bets on either a single number, various
 A croupier spins a wheel in one direction, then spins a ball in the opposite direction around a tilted circular track running around the outer edge of the wheel. 
 Players that have winning bets get awarded with the amount they bet plus a factor depending on the type of bet they choose.
 
-![Tux, the Linux mascot](/assets/roulette.jpg =250x250)
+![Tux, the Linux mascot](/assets/roulette.jpg)
 
 ## Description
 Create a console application that simulates a Roulette, where you can place different type of bets selecting an amount of money to bet. 
