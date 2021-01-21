@@ -7,7 +7,7 @@ In the game, players may choose to place bets on either a single number, various
 A croupier spins a wheel in one direction, then spins a ball in the opposite direction around a tilted circular track running around the outer edge of the wheel. 
 Players that have winning bets get awarded with the amount they bet plus a factor depending on the type of bet they choose.
 
-![Tux, the Linux mascot](/assets/roulette.jpg)
+![Tux, the Linux mascot](/assets/roulette.jpg =250x250)
 
 ## Description
 Create a console application that simulates a Roulette, where you can place different type of bets selecting an amount of money to bet. 
@@ -16,6 +16,7 @@ When the bet is placed, a random number is going to be generated as a result. If
 current amount plus the awarded money.** Assume the roulette to be created is a **Single-zero wheel.** <br>
 
 | Colour | Numbers |
+|--------|---------|
 | Black | 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35 |
 | Red | 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 |
 
