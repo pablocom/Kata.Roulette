@@ -5,12 +5,15 @@ namespace RouletteSimulator
 {
     public class Roulette
     {
+        private readonly IResultGenerator resultGenerator;
         public Player Player { get; }
 
-        public Roulette()
+        public Roulette(IResultGenerator resultGenerator, double initialMoney)
         {
+            this.resultGenerator = resultGenerator;
+            
             Player = new Player();
-            Player.AddMoney(60);
+            Player.AddMoney(initialMoney);
         }
 
         public void ProcessPlay(string input)
@@ -22,9 +25,9 @@ namespace RouletteSimulator
             {
                 if (int.TryParse(inputBet, out var betNumber))
                     Player.CreateBetFor(betNumber, amount);
-                else if (inputBet.Equals("Red", StringComparison.InvariantCultureIgnoreCase))
+                else if (inputBet.Equals("red"))
                     Player.CreateBetFor(Colour.Red, amount);
-                else if (inputBet.Equals("Black", StringComparison.InvariantCultureIgnoreCase))
+                else if (inputBet.Equals("black"))
                     Player.CreateBetFor(Colour.Black, amount);
             }
             
@@ -33,7 +36,7 @@ namespace RouletteSimulator
 
         private void Play()
         {
-            var result = GenerateRandomResult();
+            var result = resultGenerator.GenerateRandomResult();
 
             var moneyBack = Player.CurrentBets.Sum(bet => bet.CalculateAward(result));
 
@@ -41,8 +44,6 @@ namespace RouletteSimulator
             Player.AddMoney(moneyBack);
             Player.ClearBets();
         }
-
-        private static int GenerateRandomResult() => new Random().Next(0, 36);
 
         private void PrintResult(int result) 
             => Console.WriteLine($"RESULT OF GAME: {ColourByNumberMapper.ColourByNumber(result)} - {result}");

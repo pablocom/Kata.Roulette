@@ -9,7 +9,7 @@ namespace RouletteSimulator
             Console.WriteLine("WELCOME TO ROULETTE SIMULATOR!");
             Console.WriteLine();
 
-            var roulette = new Roulette();
+            var roulette = new Roulette(new ResultGenerator(), 60);
             while (roulette.Player.ActualMoney > 0)
             {
                 Console.WriteLine($"Current money: {roulette.Player.ActualMoney:N} euros");
