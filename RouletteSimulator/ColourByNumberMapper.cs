@@ -10,7 +10,7 @@ namespace RouletteSimulator
             {Colour.Red, new HashSet<int> { 1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36 }},
         }; 
         
-        public static Colour GetColourByNumber(int number)
+        public static Colour ColourByNumber(int number)
         {
             if (number == 0)
                 return Colour.Green;

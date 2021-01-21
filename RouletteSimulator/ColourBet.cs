@@ -14,7 +14,7 @@
 
         public override double CalculateAward(int result)
         {
-            if (ColourByNumberMapper.GetColourByNumber(result) == Colour)
+            if (ColourByNumberMapper.ColourByNumber(result) == Colour)
                 return MoneyBet * 2;
             
             return 0;

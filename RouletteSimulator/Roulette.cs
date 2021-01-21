@@ -28,7 +28,7 @@ namespace RouletteSimulator
 
         private void PrintResult(int result)
         {
-            Console.WriteLine($"RESULT OF GAME: {ColourByNumberMapper.GetColourByNumber(result)} - {result}");
+            Console.WriteLine($"RESULT OF GAME: {ColourByNumberMapper.ColourByNumber(result)} - {result}");
         }
 
         private static int GenerateRandomResult()
