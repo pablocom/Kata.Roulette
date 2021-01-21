@@ -7,6 +7,11 @@
             Colour = colour;
         }
 
+        public static ColourBet CreateColourBet(Colour colour, int amountOnBet)
+        {
+            return new(colour, amountOnBet);
+        }
+
         public override double CalculateAward(int result)
         {
             if (ColourByNumberMapper.GetColourByNumber(result) == Colour)

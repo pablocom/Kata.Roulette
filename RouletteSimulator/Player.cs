@@ -10,7 +10,6 @@ namespace RouletteSimulator
 
         public Player()
         {
-            
         }
 
         public void AddMoney(double amount)
@@ -40,7 +39,7 @@ namespace RouletteSimulator
             ActualMoney -= amount;
         }
 
-        public void RemoveBets()
+        public void ClearBets()
         {
             CurrentBets.Clear();
         }

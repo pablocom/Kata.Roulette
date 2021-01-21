@@ -21,10 +21,9 @@ namespace RouletteSimulator
                 moneyBack += bet.CalculateAward(result);
 
             Player.AddMoney(moneyBack);
-
             PrintResult(result);
 
-            Player.RemoveBets();
+            Player.ClearBets();
         }
 
         private void PrintResult(int result)

@@ -20,7 +20,7 @@ namespace RouletteSimulator
 
                 var inputAmount = input.Split(' ')[1];
                 var inputBet = input.Split(' ')[0];
-                
+
                 if (double.TryParse(inputAmount, out double amount))
                 {
                     if (int.TryParse(inputBet, out int betNumber))

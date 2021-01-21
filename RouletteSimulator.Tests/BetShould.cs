@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace RouletteSimulator.Tests
 {
@@ -17,13 +16,36 @@ namespace RouletteSimulator.Tests
         [TestCase(22, Colour.Black)]
         [TestCase(35, Colour.Black)]
         public void CreateBetColourForGivenBetNumber(int betNumber, Colour expectedColour)  
-        { 
-            var player = new Player();
-            player.AddMoney(16.55);
-            player.CreateBetFor(betNumber, 16.55);
+        {
+            var bet = NumberBet.CreateNumberBet(betNumber, 1);
+            
+            Assert.That(bet.BetNumber, Is.EqualTo(betNumber));
+            Assert.That(bet.Colour, Is.EqualTo(expectedColour));
+        }
+        
+        [Test]
+        public void CalculateAwardCorrectlyForNumberBet()
+        {
+            var betNumber = 5;
+            var amountOnBet = 10;
+            var bet = NumberBet.CreateNumberBet(betNumber, amountOnBet);
 
-            Assert.That(((NumberBet) player.CurrentBets.First()).BetNumber, Is.EqualTo(betNumber));
-            Assert.That(player.CurrentBets.First().Colour, Is.EqualTo(expectedColour));
+            var result = bet.CalculateAward(betNumber);
+            
+            Assert.That(result, Is.EqualTo(amountOnBet * 36));
+        }
+        
+        [Test]
+        public void CalculateAwardCorrectlyForColourBet()
+        {
+            var betColour = Colour.Black;
+            var amountOnBet = 10;
+            var bet = ColourBet.CreateColourBet(betColour, amountOnBet);
+
+            var blackColouredNumber = 2;
+            var result = bet.CalculateAward(blackColouredNumber);
+            
+            Assert.That(result, Is.EqualTo(amountOnBet * 2));
         }
     }
 }
