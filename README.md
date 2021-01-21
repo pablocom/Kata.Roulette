@@ -12,7 +12,7 @@ Players that have winning bets get awarded with the amount they bet plus a facto
 ## Description
 Create a console application that simulates a Roulette, where you can place different type of bets selecting an amount of money to bet. 
 To simplify only one bet at a time can be in game. The player starts with X amount of money in game, and when the amount is 0 loses the game.
-When the bet is placed, a random number is going to be generated as a result. If the **colour or number matches the bet, the player is going to have his 
+When the bet is placed, a random number is going to be generated as a result **from 0 to 36**. If the **colour or number matches the bet, the player is going to have his 
 current amount plus the awarded money.** Assume the roulette to be created is a **Single-zero wheel.** <br>
 
 | Colour | Numbers |
