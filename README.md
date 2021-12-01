@@ -1,5 +1,4 @@
 ﻿# Roulette Kata
-*Created by me*
 
 ## Story
 Roulette is a casino popular game named after the French word meaning *little wheel*. 
