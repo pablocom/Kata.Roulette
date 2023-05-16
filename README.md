@@ -23,6 +23,7 @@ current amount plus the awarded money.** Assume the roulette to be created is a 
 ## Rules
 - The application will read line from console with the bet that player wants to play, always following this format:<br>
   `{Number or Colour} {Amount}`
+- The result number will be always random between 0 and 36
 - There are two different types of bets: **ColourBet** and **NumberBet** 
     - **NumberBet:** <br>
       Input example: `5 4.85` <br>
